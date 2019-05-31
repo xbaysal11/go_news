@@ -5,10 +5,13 @@ import (
 )
 
 func New() *gin.Engine {
-	r := gin.Default()
+	r := gin.New()
 
-	r.GET("/", indexHandler)
-	r.GET("/search/:category", collectHandler)
+	r.GET("/", mainHandler)
+	r.GET("/search/:category", searchHandler)
 	r.GET("/result/:category", resultHandler)
+
+	r.GET("/reset", resetHandler)
+
 	return r
 }
