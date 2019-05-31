@@ -1,10 +1,10 @@
 package main
 
 import (
-	"fmt"
-	// "github.com/gin-gonic/gin"
+	"go_news/routes"
 )
 
 func main() {
-	fmt.Println("Hello World!")
+	r := routes.New()
+	r.Run()
 }
